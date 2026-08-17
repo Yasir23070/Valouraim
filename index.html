@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VALOUR — Arcade Community</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="nav-container">
+    <a href="#" class="logo">
+      <span>V</span> VALOUR
+    </a>
+
+    <nav>
+      <a href="#community">Community</a>
+      <a href="#arcade">Arcade</a>
+      <a href="#leaderboard">Leaderboard</a>
+    </nav>
+
+    <a
+      href="https://discord.gg/QmHv43CsQr"
+      target="_blank"
+      class="discord-btn"
+    >
+      Join Discord
+    </a>
+  </div>
+</header>
+
+
+<section class="hero">
+
+  <div class="hero-glow"></div>
+
+  <div class="hero-content">
+
+    <div class="online-badge">
+      <span></span>
+      VALOUR COMMUNITY ONLINE
+    </div>
+
+    <h1>
+      PLAY.
+      <strong>COMPETE.</strong>
+      DOMINATE.
+    </h1>
+
+    <p>
+      Welcome to Valour. Join the community, compete in clan wars,
+      play arcade games and fight your way to the top of the leaderboard.
+    </p>
+
+    <div class="hero-buttons">
+
+      <a
+        href="https://discord.gg/QmHv43CsQr"
+        target="_blank"
+        class="primary-btn"
+      >
+        Join Discord
+      </a>
+
+      <a href="#arcade" class="secondary-btn">
+        Play Arcade
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<main class="container">
+
+
+<section class="stats">
+
+  <div class="stat-card">
+    <small>ONLINE MEMBERS</small>
+    <strong id="onlineMembers">45</strong>
+    <span class="green">● Online</span>
+  </div>
+
+  <div class="stat-card">
+    <small>TOTAL MEMBERS</small>
+    <strong>173</strong>
+    <span>Valour Community</span>
+  </div>
+
+  <div class="stat-card">
+    <small>ARCADE GAMES</small>
+    <strong>6</strong>
+    <span>Play & compete</span>
+  </div>
+
+</section>
+
+
+<!-- COMMUNITY -->
+
+<section id="community" class="section">
+
+  <div class="section-title">
+    <small>THE COMMUNITY</small>
+    <h2>Everything Valour.</h2>
+    <p>
+      One place for the entire Valour community.
+    </p>
+  </div>
+
+
+  <div class="feature-grid">
+
+    <article class="feature">
+      <div>⚔️</div>
+      <h3>Clan Wars</h3>
+      <p>
+        Compete against other clans and prove your team is the best.
+      </p>
+    </article>
+
+    <article class="feature">
+      <div>🏆</div>
+      <h3>Tournaments</h3>
+      <p>
+        Join tournaments and fight for the number one spot.
+      </p>
+    </article>
+
+    <article class="feature">
+      <div>🎁</div>
+      <h3>Giveaways</h3>
+      <p>
+        Participate in Valour community giveaways and events.
+      </p>
+    </article>
+
+    <article class="feature">
+      <div>💬</div>
+      <h3>Chill Chats</h3>
+      <p>
+        Hang out, meet players and talk with the community.
+      </p>
+    </article>
+
+    <article class="feature">
+      <div>🎮</div>
+      <h3>Arcade</h3>
+      <p>
+        Play competitive mini-games and improve your skills.
+      </p>
+    </article>
+
+    <article class="feature">
+      <div>👑</div>
+      <h3>Top Players</h3>
+      <p>
+        Climb the leaderboard and become a Valour legend.
+      </p>
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- ARCADE -->
+
+<section id="arcade" class="section">
+
+  <div class="section-title">
+    <small>VALOUR ARCADE</small>
+    <h2>Choose your game.</h2>
+    <p>
+      Play different challenges and compete for the highest score.
+    </p>
+  </div>
+
+
+  <div class="game-selector">
+
+    <button class="game-button active" onclick="selectGame('aim')">
+      🎯 Aim Trainer
+    </button>
+
+    <button class="game-button" onclick="selectGame('reaction')">
+      ⚡ Reaction
+    </button>
+
+    <button class="game-button" onclick="selectGame('memory')">
+      🧠 Memory
+    </button>
+
+    <button class="game-button" onclick="selectGame('precision')">
+      🔴 Precision
+    </button>
+
+    <button class="game-button" onclick="selectGame('numbers')">
+      🔢 Number Rush
+    </button>
+
+    <button class="game-button" onclick="selectGame('clicker')">
+      🖱️ Speed Clicker
+    </button>
+
+  </div>
+
+
+  <div class="game-panel">
+
+    <div class="game-header">
+
+      <div>
+        <h3 id="gameTitle">Aim Trainer</h3>
+        <p id="gameDescription">
+          Hit as many targets as possible in 30 seconds.
+        </p>
+      </div>
+
+      <div class="game-stats">
+
+        <span>
+          Score
+          <b id="score">0</b>
+        </span>
+
+        <span>
+          Time
+          <b id="gameTime">30</b>
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div id="gameArea" class="game-area">
+
+      <div id="gameMessage" class="game-message">
+
+        <h2 id="messageTitle">
+          Ready?
+        </h2>
+
+        <p id="messageText">
+          Select a game and press Start.
+        </p>
+
+        <button
+          onclick="startGame()"
+          class="primary-btn"
+        >
+          Start Game
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <div class="game-footer">
+
+      <button
+        class="secondary-btn"
+        onclick="startGame()"
+      >
+        Start / Restart
+      </button>
+
+      <button
+        class="secondary-btn"
+        onclick="toggleSound()"
+        id="soundButton"
+      >
+        🔊 Sound On
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- LEADERBOARD -->
+
+<section id="leaderboard" class="section">
+
+  <div class="section-title">
+    <small>TOP 100</small>
+    <h2>Leaderboard.</h2>
+    <p>
+      The best Valour arcade players.
+    </p>
+  </div>
+
+
+  <div class="leaderboard">
+
+    <div class="leader-row header">
+
+      <span>Rank</span>
+      <span>Player</span>
+      <span>Game</span>
+      <span>Score</span>
+
+    </div>
+
+    <div id="leaderboardList"></div>
+
+  </div>
+
+</section>
+
+
+<!-- DISCORD -->
+
+<section class="discord-section">
+
+  <div>
+
+    <small>JOIN THE COMMUNITY</small>
+
+    <h2>
+      Ready to join Valour?
+    </h2>
+
+    <p>
+      Join the official Discord server to access the full community.
+    </p>
+
+  </div>
+
+  <a
+    href="https://discord.gg/QmHv43CsQr"
+    target="_blank"
+    class="primary-btn"
+  >
+    Join Discord
+  </a>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+  <div class="container footer-content">
+
+    <div>
+      <strong>VALOUR</strong>
+      <p>Play. Compete. Dominate.</p>
+    </div>
+
+    <div>
+      <p>Owners: Sule & Yasir</p>
+      <p>© 2026 Valour</p>
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
